@@ -22,6 +22,7 @@
     <string name="tabRnB"><![CDATA[R&B]]></string>
     <string name="tabFestival">Festival</string>
     <string name="textFavorite">Your favorites</string>
+    <string name="textKaraoke">Karaoke</string>
     <string name="textViewChangePassword">Change Password</string>
     <string name="back">Back</string>
     <string name="buttonSendBTN">Send Authentication Email</string>
@@ -31,4 +32,9 @@
     <string name="editTextConfirmNewPass">Confirm new password</string>
     <string name="buttonSendChange">Change</string>
     <string name="cancel">Cancel</string>
+    <string name="song_name">This is song name</string>
+    <string name="song_artist">This is song artist</string>
+    <string name="durationPlayed">1:27</string>
+    <string name="durationTotal">3:48</string>
+    <string name="enterYourEmail">Please enter your Email</string>
 </resources>
