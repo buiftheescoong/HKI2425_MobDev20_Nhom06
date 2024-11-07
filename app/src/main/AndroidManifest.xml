@@ -17,11 +17,50 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SoundNova">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".Login"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+<!--        <activity android:name=".StartActivity"-->
+<!--            android:exported="true">-->
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity android:name=".HomeActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity android:name=".Register"
+            android:exported="true">
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".ForgotPassword"
+            android:exported="true">
+
+        </activity>
+
+        <activity android:name=".ChangePassword"
+            android:exported="true">
+
         </activity>
     </application>
 

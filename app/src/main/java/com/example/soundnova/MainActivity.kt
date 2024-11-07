@@ -16,11 +16,8 @@ import com.example.soundnova.ui.theme.SoundNovaTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            SoundNovaTheme {
-            }
-        }
+        setContentView(R.layout.home_activity)
     }
 }
+
 
