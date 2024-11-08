@@ -14,7 +14,7 @@
         android:layout_height="120dp"
         android:layout_marginTop="52dp"
         android:src="@drawable/logo"/>
-
+-
     <!-- Tiêu đề đăng nhập -->
     <TextView
         android:id="@+id/textViewLogin"
@@ -50,12 +50,13 @@
         android:layout_marginBottom="28dp"
         android:background="@drawable/edit_text_border"
         android:hint="@string/editTextPassword"
-        android:textColorHint="white"
+        android:textColorHint="@color/white"
         android:inputType="textPassword"
         android:padding="16dp"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:fontFamily="sans-serif" />
+
 
     <TextView
         android:id="@+id/note"
@@ -65,7 +66,9 @@
         android:text=""
         android:textStyle="italic"
         android:textSize="18sp"
+        android:textColor="@color/white"
         android:layout_marginBottom="24dp"/>
+
 
     <!-- Nút đăng nhập -->
     <Button

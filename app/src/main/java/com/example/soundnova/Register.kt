@@ -18,6 +18,7 @@ class Register: ComponentActivity() {
     private lateinit var editTextName: EditText
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
+    private lateinit var editTextConfirmPassword: EditText
     private lateinit var buttonSignUp: Button
     private lateinit var textViewLoginLink: TextView
     private lateinit var note: TextView
@@ -27,11 +28,14 @@ class Register: ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_up)
 
-        editTextName = findViewById(R.id.editTextName)
-        editTextEmail = findViewById(R.id.editTextEmail)
-        editTextPassword = findViewById(R.id.editTextPassword)
+        editTextName = findViewById(R.id.editTextSignUpUsername)
+        editTextEmail = findViewById(R.id.editTextSignUpEmail)
+        editTextPassword = findViewById(R.id.editTextSignUpPassword)
+        editTextConfirmPassword = findViewById(R.id.editTextSignUpRepeatPassword)
         buttonSignUp = findViewById(R.id.buttonRegister)
-        textViewLoginLink = findViewById(R.id.textViewLoginLink)
+
+
+        textViewLoginLink = findViewById(R.id.textViewSignIn)
         note = findViewById(R.id.note)
         firebaseAuth = FirebaseAuth.getInstance()
         validator = Validator()

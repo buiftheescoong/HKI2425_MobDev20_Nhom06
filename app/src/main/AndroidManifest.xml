@@ -39,6 +39,10 @@
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
 <!--        </activity>-->
+        <activity android:name=".HomeActivity"
+            android:exported="true">
+
+        </activity>
 
         <activity android:name=".Register"
             android:exported="true">
@@ -49,6 +53,15 @@
 <!--            </intent-filter>-->
         </activity>
 
+        <activity android:name=".ForgotPassword"
+            android:exported="true">
+
+        </activity>
+
+        <activity android:name=".ChangePassword"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

@@ -17,17 +17,19 @@ class Login : ComponentActivity() {
     private lateinit var buttonConfirmLogin: Button
     private lateinit var textViewForgotPassword: TextView
     private lateinit var textViewSignUp: TextView
+    private lateinit var note: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_in)
         firebaseAuth = FirebaseAuth.getInstance()
 
-        editTextEmail = findViewById(R.id.editTextEmail)
-        editTextPassword = findViewById(R.id.editTextPassword)
+        editTextEmail = findViewById(R.id.editTextSignInUsername)
+        editTextPassword = findViewById(R.id.editTextSignInPassword)
         buttonConfirmLogin = findViewById(R.id.buttonConfirmLogin)
-        textViewForgotPassword = findViewById(R.id.textViewForgotPassword)
+        textViewForgotPassword = findViewById(R.id.textViewForgetPassword)
         textViewSignUp = findViewById(R.id.textViewSignUp)
+        note = findViewById(R.id.note)
 
         buttonConfirmLogin.setOnClickListener {
             val email = editTextEmail.text.toString()
@@ -35,13 +37,19 @@ class Login : ComponentActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(applicationContext, MainActivity::class.java)
+                        val intent = Intent(applicationContext, HomeActivity::class.java)
                         startActivity(intent)
                     } else {
+                        note.setText("Email or Password is not correct")
                         Toast.makeText(this,  "Email or Password is not correct", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
+            else if (email.isEmpty()) {
+                note.setText("Email is empty")
+
+            }
+            else note.setText("Password is empty")
         }
 
         textViewSignUp.setOnClickListener {
@@ -50,7 +58,7 @@ class Login : ComponentActivity() {
         }
 
         textViewForgotPassword.setOnClickListener {
-            val intent = Intent(applicationContext, MainActivity::class.java)
+            val intent = Intent(applicationContext, ForgotPassword::class.java)
             startActivity(intent)
         }
     }
@@ -58,7 +66,7 @@ class Login : ComponentActivity() {
     override fun onStart() {
         super.onStart()
         if (firebaseAuth.currentUser != null) {
-            val intent = Intent(applicationContext, MainActivity::class.java)
+            val intent = Intent(applicationContext, HomeActivity::class.java)
             startActivity(intent)
         }
     }
